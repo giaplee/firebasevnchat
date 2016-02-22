@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity
      */
     private void initFirebase(String firebase_app_name){
         Firebase.setAndroidContext(this);
-        mFirebaseRef = new Firebase("https://" + firebase_app_name +".firebaseio.com");
+        mFirebaseRef = new Firebase("https://" + firebase_app_name +".firebaseio.com/chathistory");
 
         mFirebaseRef.authWithCustomToken("SQXxFElgHhbMuyT8kSY5RmRYu3CRej7szdWOOqt0", new Firebase.AuthResultHandler() {
             @Override
