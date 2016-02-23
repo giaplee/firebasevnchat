@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity
         chat_msg.setUser_name(user_name);
         chat_msg.setTime("" + System.currentTimeMillis());
 
-        mFirebaseRef.push().setValue(chat_msg);
+        mFirebaseRef.child("chattemp").push().setValue(chat_msg);
 
     }
 
