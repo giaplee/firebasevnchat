@@ -29,10 +29,12 @@ import com.firebase.client.FirebaseError;
 import java.util.HashMap;
 import java.util.Map;
 
+import app.lee.giap.firechatdemo.fragment.FriendListFragment;
+import app.lee.giap.firechatdemo.fragment.dummy.DummyContent;
 import app.lee.giap.firechatdemo.models.ChatMessage;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, FriendListFragment.OnListFragmentInteractionListener{
 
     //public variables:
     private Firebase mFirebaseRef;
@@ -181,6 +183,11 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+
+    }
+
     //<====================================================== End my code block
 
     /**
@@ -231,8 +238,18 @@ public class MainActivity extends AppCompatActivity
 
         @Override
         public Fragment getItem(int position) {
-           //trả về fragment ở vị trí hiện tại được chọn
-            return PlaceholderFragment.newInstance(position + 1);
+
+            Fragment ret_fragment = null;
+            switch (position){
+                case 0: ret_fragment = PlaceholderFragment.newInstance(position + 1);
+                    break;
+                case 1: ret_fragment = FriendListFragment.newInstance(1);
+                    break;
+                case 2: ret_fragment = PlaceholderFragment.newInstance(position + 1);
+                    break;
+            }
+
+            return ret_fragment; //trả về fragment tương ứng vỡi mỗi tab
         }
 
         @Override
@@ -245,12 +262,13 @@ public class MainActivity extends AppCompatActivity
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Chat gần đây";
                 case 1:
-                    return "SECTION 2";
+                    return "Bạn bè";
                 case 2:
-                    return "SECTION 3";
+                    return "Nhóm/Phòng";
             }
+
             return null;
         }
     }

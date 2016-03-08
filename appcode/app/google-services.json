@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "giaplv-prj1",
+    "project_number": "504917677432",
+    "name": "giaplv-prj1"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504917677432:android:7f3bed2ca2f33c6e",
+        "client_id": "android:app.lee.giap.firebasechatdemo",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "app.lee.giap.firebasechatdemo",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504917677432-picv8g2bt98j9gkc66378qhlmqctvlrv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.lee.giap.firebasechatdemo",
+            "certificate_hash": "893F4FC4FEFFA468515E649636B7690EF583D6DB"
+          }
+        },
+        {
+          "client_id": "504917677432-5c66204osp837cvm8k52pfb52tnb09g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
